@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :models
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   Rails.application.routes.draw do
  
+  devise_for :models
   resources :articles do
     resources :comments
   end
